@@ -1,0 +1,53 @@
+{
+	"format_version": 2,
+	"header": {
+		"description": "Chop down trees from A to Z!",
+		"name": "[Why Not] Chop Chop",
+		"uuid": "2c8d8f53-fdf3-47d4-b4bb-59f4317acc4d",
+		"pack_scope": "world",
+		"version": [
+			1,
+			0,
+			0
+		],
+		"min_engine_version": [
+			1,
+			26,
+			30
+		]
+	},
+	"modules": [
+		{
+			"type": "script",
+			"language": "javascript",
+			"entry": "scripts/main.js",
+			"uuid": "4adc2147-e5fc-445e-8fd8-3a3e1933b4c3",
+			"version": [
+				26,
+				7,
+				0
+			]
+		},
+		{
+			"type": "data",
+			"uuid": "8ac16dfb-2737-4a5a-b3af-49a5c93d9e64",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"module_name": "@minecraft/server",
+			"version": "2.8.0"
+		}
+	],
+	"capabilities": [
+		"pbr"
+	],
+	"metadata": {
+		"product_type": "addon"
+	}
+}

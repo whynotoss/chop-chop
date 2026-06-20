@@ -1,0 +1,51 @@
+{
+	"$schema": "https://raw.githubusercontent.com/Bedrock-OSS/regolith-schemas/main/config/v1.7.json",
+	"author": "daniswastaken",
+	"name": "[Why Not] Chop Chop",
+	"packs": {
+		"behaviorPack": "./packs/BP"
+	},
+	"regolith": {
+		"dataPath": "./data",
+		"filterDefinitions": {
+			"mcaddon": {
+				"url": "github.com/lightyisreal/regolith-filters",
+				"version": "a41eb063951b2b6ca31c45504d6bd1bfaff968f4"
+			},
+			"rolldown": {
+				"url": "github.com/lightyisreal/regolith-filters",
+				"version": "a41eb063951b2b6ca31c45504d6bd1bfaff968f4"
+			}
+		},
+		"formatVersion": "1.7.0",
+		"profiles": {
+			"default": {
+				"export": {
+					"build": "standard",
+					"readOnly": false,
+					"target": "development"
+				},
+				"filters": [
+					{
+						"filter": "rolldown"
+					}
+				]
+			},
+			"production": {
+				"export": {
+					"build": "standard",
+					"readOnly": false,
+					"target": "local"
+				},
+				"filters": [
+					{
+						"profile": "default"
+					},
+					{
+						"filter": "mcaddon"
+					}
+				]
+			}
+		}
+	}
+}
