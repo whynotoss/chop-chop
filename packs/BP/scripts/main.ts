@@ -110,11 +110,12 @@ world.beforeEvents.playerBreakBlock.subscribe(e => {
                     { x: location.x + 1, y: location.y - 1, z: location.z + 1 },
                 ];
                 for (let loc of adjacent) {
-                    system.run(() => {
-                        increaseDurability(e.player, e.itemStack)
-                    })
                     toBreak.push(loc);
                 }
+
+                system.run(() => {
+                    increaseDurability(e.player, e.itemStack)
+                })
             }
         }
         e.cancel = true;
